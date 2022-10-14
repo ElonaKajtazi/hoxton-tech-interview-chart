@@ -43,29 +43,19 @@ const studentData = [
 // Using the Recharted library, create a graph as similar as you can, to the one in the #Classroom
 
 function App() {
-    // const [data, setData] = useState(studentData);
-    // const [submissions, setSubbmissions] = useState()
   return (
     <>
-      {/* Code your solution here */}
-      {/* <h1>hello</h1> */}
       <BarChart width={730} height={250} data={studentData}>
-        <CartesianGrid stroke="" />
-        <XAxis dataKey="name"  />
-        <YAxis  />
-        {/* {studentData.map((s) => ( */}
-
-    
-          <Tooltip />
-          <Legend />
-
-        {/* ))} */}
-
-        <Bar dataKey="beavers" fill="#8884d8" />
-        <Bar dataKey="stars" fill="#82ca9d" />
+        <CartesianGrid  stroke="" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Bar dataKey="submissions.beavers" name="Beavers" fill="#da9249"  label/>
+        <Bar dataKey="submissions.stars" name="Stars" fill="#ffd805" label />
       </BarChart>
     </>
   );
 }
-// can't figure it out ☹️
+
 export default App;
